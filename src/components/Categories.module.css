@@ -1,0 +1,8 @@
+.categories {
+    margin-top: 1em;
+}
+
+.categories img {
+    width: 100%;
+    cursor: pointer;
+}

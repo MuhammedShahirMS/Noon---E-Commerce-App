@@ -1,0 +1,45 @@
+.item {
+    display: grid;
+}
+
+.brand {
+   font-size: large;
+   font-weight: bold;
+}
+
+.name {
+    font-style: italic;
+}
+
+.quantity {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    margin-left: 60%;
+}
+
+.qtyBtns {
+    display: grid;
+    padding-left: 1em;
+}
+
+.up {
+    border: 0.05px solid gray ;
+    border-radius: 0.3em;
+    color: blue;
+}
+
+.down {
+    background-color:maroon;
+    border-radius: 0.3em;
+    border: none;
+    color: white;
+}
+
+.itemImg {
+    align-items: center;
+}
+
+.itemImg img {
+    height:140px;
+}

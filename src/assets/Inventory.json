@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "brand": "Apple",
+        "category": "mobiles",
+        "name": "iPhone 14 Pro Max 256GB Deep Purple",
+        "price": 32.8,
+        "imgUrl": "/images/iPhone 14.avif"
+    },
+    {
+        "id": 2,
+        "brand": "Sony",
+        "category": "gaming",
+        "name": "PlayStation 5 Console (Disc Version) With Controller",
+        "price": 1940,
+        "imgUrl": "/images/PS5.PNG"
+    },
+    {
+        "id": 3,
+        "brand": "T500",
+        "category": "watches",
+        "name": "Bluetooth Full Touch Call Smartwatch ",
+        "price": 121.70,
+        "imgUrl": "/images/Smartwatch.jpg"
+    },
+    {
+        "id": 4,
+        "brand": "Samsung",
+        "category": "mobiles",
+        "name": "Galaxy A13 Dual SIM Blue / Light Blue ",
+        "price": 515,
+        "imgUrl": "/images/Samsung Galaxy.jpg"
+    },
+    {
+        "id": 5,
+        "brand": "Apple",
+        "category" : "mobiles",
+        "name": "iPhone 13 128GB Blue 5G - KSA Version",
+        "price": 2689,
+        "imgUrl": "/images/iphone13.webp"
+    },
+    {
+        "id": 6,
+        "brand": "XiuWoo",
+        "category": "jewelery",
+        "name": "3300-Piece Small Colourful Bracelet Beads",
+        "price": 28,
+        "imgUrl": "/images/Beads.PNG"
+    },
+    {
+        "id": 7,
+        "brand": "Apple",
+        "category": "laptops",
+        "name": "MacBook Air 13.6-Inch Display, 8-Core",
+        "price": 4169,
+        "imgUrl": "/images/Products/apple Macbook.avif"
+    },
+    {
+        "id": 8,
+        "brand": "hp",
+        "category": "laptops",
+        "name": "15-dy2795wm Laptop With 15.6-Inch FHD",
+        "price": 1799,
+        "imgUrl": "/images/Products/hp Laptop.avif"
+    },
+    {
+        "id": 9,
+        "brand": "Sony",
+        "category" : "gaming",
+        "name": "God of War Ragnarok - PlayStation 4 (PS4)",
+        "price": 202,
+        "imgUrl": "/images/Products/GAMEGOD.webp"
+    },
+    {
+        "id": 10,
+        "brand": "L'OREAL PARIS",
+        "category":"beauty",
+        "name": "L'Oréal Paris False Lash  14ml Black",
+        "price": 25,
+        "imgUrl": "/images/Products/loreal.avif"
+    },
+    {
+        "id": 11,
+        "brand": "Chanel blue",
+        "category":"beauty",
+        "name": "Bleu De Chanel Paris  Spray For Men 100ml",
+        "price": 509.10,
+        "imgUrl": "/images/Products/Chanel blue.avif"
+    },
+    {
+        "id": 12,
+        "category": "mens",
+        "brand": "Puma",
+        "name": "Men Olive Green Sweatshirt",
+        "price": 32.8,
+        "imgUrl": "/images/Products/PumaSweatShirt.png"
+    },
+    {
+        "id": 13,
+        "brand": "Lewis",
+        "category": "mens",
+        "name": "Men Blue Light Fade Stretchable Jeans",
+        "price": 37.50,
+        "imgUrl": "/images/Products/LewisJeans.png"
+    },
+    {
+        "id": 14,
+        "brand": "Nike",
+        "category": "mens",
+        "name": "Men Air Force Green Sneakers",
+        "price": 121.70,
+        "imgUrl": "/images/Products/NikeShoe.png"
+    },
+    {
+        "id": 15,
+        "brand": "Adidas",
+        "category": "mens",
+        "name": "Men Black Jacket",
+        "price": 56.25,
+        "imgUrl": "/images/Products/AdidasJacket.png"
+    },
+    {
+        "id": 16,
+        "brand": "Raymond",
+        "category": "mens",
+        "name": "Men Navy Blue Slim Fit  Formal Shirt",
+        "price": 20.61,
+        "imgUrl": "/images/Products/Raymond Men.JPG"
+    },
+    {
+        "id": 18,
+        "category": "womens",
+        "brand": "Roadster",
+        "name": "Magenta Cable Knit Acrylic Pullover",
+        "price": 147,
+        "imgUrl": "/images/Products/Roadster Women.PNG"
+    },
+    {
+        "id": 19,
+        "brand": "Sangria",
+        "category": "womens",
+        "name": "Black Floral Gotta Patti Velvet Saree",
+        "price": 230,
+        "imgUrl": "/images/Products/Sangria Saree.JPG"
+    },
+    {
+        "id": 20,
+        "brand": "Adidas",
+        "category": "womens",
+        "name": "Women Black & Blue Woven Design SheenWalk Shoes",
+        "price": 200,
+        "imgUrl": "/images/Products/Adidas Womens Shoe.JPG"
+    },
+    {
+        "id": 21,
+        "brand": "Clora Creation",
+        "category": "womens",
+        "name": "Women Solid Velvet Palazzos",
+        "price": 137.5,
+        "imgUrl": "/images/Products/Clora Palazzo.JPG"
+    },
+    {
+        "id": 22,
+        "brand": "Kiana",
+        "category": "womens",
+        "name": "Women Off White Mojaris Flats",
+        "price":180,
+        "imgUrl": "/images/Products/Kiana Womens.JPG"
+    }
+]

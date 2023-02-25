@@ -1,0 +1,43 @@
+.backdrop {
+    height  : 100vh;
+    position: fixed;
+    z-index : 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.897);
+}
+
+.modal {
+    z-index: 6;
+}
+
+.signoutModal {
+    position: absolute;
+    padding: 2em;
+    margin-left: 30em;
+    margin-top:  20em;
+    z-index: 5;
+    background-color: white;
+    width: 30%;
+    border-radius: 1em;
+}
+
+.modal form {
+    padding: 5%;
+    display: grid;
+}
+
+.modal form input {
+    width: 15em;
+}
+
+.modal form button {
+    margin-top: 1em;
+    width: min-content;
+}
+
+.signoutBtn {
+    margin: 2em;
+    z-index: 6;
+    background-color: rgb(117, 48, 48);
+    color: black;
+}

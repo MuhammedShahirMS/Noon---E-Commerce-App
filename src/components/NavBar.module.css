@@ -1,0 +1,17 @@
+.navBar1 {
+    background-color: yellow;
+    color: black;
+    align-items: center;
+    justify-content: none;
+}
+
+.navBar2  {
+    background-color: white;
+    font-weight: bolder;
+    color: black;
+}
+
+.rightNavs {
+    display: flex;
+    font-weight: bold;
+}
