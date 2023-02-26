@@ -1,2 +1,3 @@
-# Noon---E-Commerce-App
-E-Commerce Application
+This is a Project of e-commerce-app done using React.js and Firebase
+
+
