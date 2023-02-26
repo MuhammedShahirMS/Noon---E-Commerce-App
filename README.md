@@ -1,5 +1,5 @@
 E- Commerce Web App (using React.js and Firebase)
-Feature rich e-commerce Interactive Web App done as a Coding test for a Job Interview Process.
+ - Feature rich e-commerce Interactive Web App done as a Coding test for a Job Interview Process.
 
 Implemented the necessary functionalities:
 
@@ -10,11 +10,11 @@ Implemented the necessary functionalities:
 • Dynamic Cart on which quantity of each Product can be changed. 
 • Responsive design for small devices.
 
-Project done with: React JS | Vite JS | Redux & Redux Toolkit | React Router v6 | Firebase Authentication | Firebase Firestore | React-Bootstrap | CSS Modules
+Project done with: React JS | Vite JS | Redux & Redux Toolkit | React Router v6 | Firebase Authentication | Cloud Firestore | React-Bootstrap | CSS Modules
 
 More info:
 
-• I used Vite.js instead of Create-React-App as the environment for this Project development since Vite is much faster compared to CRA (ESBuild is faster than Webpack).
+• I used Vite.js instead of Create-React-App as the environment for this Project development since Vite is much faster compared to CRA
 • I used custom Login Page/Modal using Firebase Authentication and for each new user, a new document is created in Firestore Database.
 
 
