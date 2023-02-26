@@ -7,26 +7,33 @@ const UserForm = props => {
 
 const emailIdInput  = useRef();
 const passWordInput = useRef();
-const passWordCInput = useRef();
+const passWordConfirmInput = useRef();
 const userNameInput = useRef();
 
 const authenticate = (e) => {
     e.preventDefault();
     const email = emailIdInput.current.value;
     const passWord = passWordInput.current.value;
-    const check   = passWordCInput.current.value;
-    const isValid = passWord.includes('@') && (passWord == check);
-
+    let passWordIsValid = false;
+    if(props.type === 'signUp'){
+      const confirmPassword = passWordConfirmInput.current.value;
+      if(confirmPassword !== passWord){
+        alert('Enter matching Passwords');
+        return;
+      }
+      passWordIsValid = email.includes('@');
+    }
+    else if(props.type === 'signIn') {
+      passWordIsValid = email.includes('@');
+    }
+    
     let userName = '';
     if(userNameInput.current){
     userName = userNameInput.current.value;
     }
-    if(isValid)
+  
+    if(passWordIsValid){
     props.authHandleFn(e, email, passWord, userName);
-
-    else {
-      alert('Password mismatch');
-      return;
     }
 }
 
@@ -40,7 +47,7 @@ if(props.type === 'signIn') {
       style={{ display: 'block', position: 'initial' }}
     >
       <Modal.Dialog>
-        <Modal.Header closeButton>
+        <Modal.Header closeButton onClick={props.closeHandleFn}>
           <Modal.Title>Login here</Modal.Title>
         </Modal.Header>
 
@@ -55,10 +62,10 @@ if(props.type === 'signIn') {
         </form>
         </Modal.Body>
         
-        <p>No Account ?</p>
+        <p className="px-5">No Account ?</p>
         <Modal.Footer>
-          <Button onClick={props.signUpNeededHandleFn} variant="secondary">Sign up</Button>
-          <Button onClick={props.closeHandleFn} variant="primary">Close</Button>
+          <Button onClick={props.signUpNeededHandleFn} variant="primary">Sign up</Button>
+          <Button onClick={props.closeHandleFn} variant="secondary">Close</Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>
@@ -74,7 +81,7 @@ else {
       style={{ display: 'block', position: 'initial' }}
     >
       <Modal.Dialog>
-        <Modal.Header closeButton>
+        <Modal.Header closeButton onClick={props.closeHandleFn}>
           <Modal.Title>Register here</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -85,7 +92,7 @@ else {
         <label htmlFor="passWord">Enter Password:</label>
         <input id="passWord" ref={passWordInput}/>
         <label htmlFor="passWordConfirm">Confirm Password:</label>
-        <input id="passWordConfirm" ref={passWordCInput}/>
+        <input id="passWordConfirm" ref={passWordConfirmInput}/>
         <label htmlFor="displayName">Enter Name:</label>
         <input id="displayName" ref={userNameInput}/>
         </form>
