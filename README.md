@@ -6,7 +6,7 @@ Implemented the necessary functionalities:
 - Developed interactive User Interface with Pages and Navigation. 
 - Attractive Navigation Bar which contains Links for Pages, Dynamic Cart Button and Profile Link Button for User Authentication.
 - Home Page with Attractive Carousels and a dozen of Product Categories.
-- Login/Register Feature for Users with Cofirm Password Field, Custom & Firebase Validations.
+- Login/Register Feature for Users with Confirm Password Field, Custom & Firebase Validations.
 - Dynamic Cart on which quantity of each Product can be changed. 
 - Responsive design for small devices.
 
