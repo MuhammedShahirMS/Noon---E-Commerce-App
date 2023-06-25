@@ -1,0 +1,17 @@
+.navBar1 {
+    background-color: yellow;
+}
+
+.navBar2  {
+    font-weight: bolder;
+    color: black;
+}
+
+
+.row {
+    width: 100%;
+}
+
+.more {
+    font-weight: bold;
+}
