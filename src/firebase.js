@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import {
-  getFirestore, collection, // getDocs
+  getFirestore // getDocs
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -10,13 +10,14 @@ const firebaseConfig = {
   projectId: "oonzoo-test",
   storageBucket: "oonzoo-test.appspot.com",
   messagingSenderId: "675171946987",
-  appId: "1:675171946987:web:4ce9a009fbc2a23be649ae"
+  appId: "1:675171946987:web:4ce9a009fbc2a23be649ae",
 };
   
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
   const db = getFirestore();
+
 
   export {auth, db };
 

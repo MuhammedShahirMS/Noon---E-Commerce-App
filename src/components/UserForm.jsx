@@ -13,6 +13,11 @@ const userNameInput = useRef();
 const authenticate = (e) => {
     e.preventDefault();
     const email = emailIdInput.current.value;
+    const emailIsValid = email.includes('@');
+    if(!emailIsValid){
+      alert('Enter a Valid email id');
+      return;
+    }
     const passWord = passWordInput.current.value;
     let passWordIsValid = false;
     if(props.type === 'signUp'){

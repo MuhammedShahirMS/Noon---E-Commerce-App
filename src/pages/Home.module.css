@@ -1,3 +1,4 @@
 .graphics {
-    background: url("/images/Graphics.PNG");
+    background: url("/images/Graphics.png");
+    background-size: cover;
 }

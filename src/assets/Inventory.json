@@ -166,5 +166,101 @@
         "name": "Women Off White Mojaris Flats",
         "price":180,
         "imgUrl": "/images/Products/Kiana Womens.JPG"
+    },
+    {
+        "id": 23,
+        "brand": "Click N Pick",
+        "category": "deals",
+        "name": "USB Rechargeable Electric Arc Lighter Silver 27x8.4x3cm",
+        "price":33.85,
+        "imgUrl": "/images/Products/Arc lighter.avif"
+    },
+    {
+        "id": 24,
+        "brand": "Ab Soket",
+        "category": "deals",
+        "name": "Abdominal Trainer Wheel Roller With Knee Mat",
+        "price":22,
+        "imgUrl": "/images/Products/AB rocket wheel.avif"
+    },
+    {
+        "id": 25,
+        "brand": "Noon East",
+        "category": "clearance",
+        "name": "Lightweight Summer Blanket King Size",
+        "price":30,
+        "imgUrl": "/images/Products/blanket.avif"
+    },
+    {
+        "id": 26,
+        "brand": "Noon East",
+        "category": "home",
+        "name": "Lightweight Summer Blanket King Size",
+        "price":30,
+        "imgUrl": "/images/Products/blanket.avif"
+    },
+    {
+        "id": 27,
+        "brand": "Noon East",
+        "category": "kitchen",
+        "name": "6 Piece Cookware Set - Aluminum Pots And Pans",
+        "price":189,
+        "imgUrl": "/images/Products/aluminium cookware.avif"
+    },
+    {
+        "id": 28,
+        "brand": "Midea",
+        "category": "kitchen",
+        "name": "4 Burner Gas Cooker 60 x 60 cm, Full Safety",
+        "price":809,
+        "imgUrl": "/images/Products/Burner Oven.avif"
+    },
+    {
+        "id": 29,
+        "brand": "Moon",
+        "category": "babies",
+        "name": "Compact - Cabin Stroller - Purple",
+        "price":282.5,
+        "imgUrl": "/images/Products/baby stroller.avif"
+    },
+    {
+        "id": 30,
+        "brand": "Sudo Cream",
+        "category": "babies",
+        "name": "Antiseptic Healing Cream ",
+        "price":27,
+        "imgUrl": "/images/Products/baby cream.avif"
+    },
+    {
+        "id": 31,
+        "brand": "Happy Kids",
+        "category": "babies",
+        "name": "Starshine Ride-On Car- Assorted 50x33x21.5cm",
+        "price":35,
+        "imgUrl": "/images/Products/baby rider.avif"
+    },
+    {
+        "id": 32,
+        "brand": "Adidas",
+        "category": "sports",
+        "name": "Clear Factor Running Shoes Black",
+        "price":144,
+        "imgUrl": "/images/Products/Adidas Shoe.avif"
+    },
+    {
+        "id": 33,
+        "brand": "Adidas",
+        "category": "mens",
+        "name": "Clear Factor Running Shoes Black",
+        "price":144,
+        "imgUrl": "/images/Products/Adidas Shoe.avif"
+    },
+    {
+        "id": 34,
+        "brand": "molten",
+        "category": "sports",
+        "name": "FIBA Approved Authentic Leather Basketball",
+        "price":69,
+        "imgUrl": "/images/Products/basket ball.avif"
     }
 ]

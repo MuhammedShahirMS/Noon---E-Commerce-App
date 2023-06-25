@@ -12,12 +12,12 @@
 
 .signoutModal {
     position: absolute;
+    width: 50%;
     padding: 2em;
-    margin-left: 30em;
-    margin-top:  20em;
+    margin-left: 30%;
+    margin-top:  5%;
     z-index: 5;
     background-color: white;
-    width: 30%;
     border-radius: 1em;
 }
 
@@ -35,9 +35,3 @@
     width: min-content;
 }
 
-.signoutBtn {
-    margin: 2em;
-    z-index: 6;
-    background-color: rgb(117, 48, 48);
-    color: black;
-}

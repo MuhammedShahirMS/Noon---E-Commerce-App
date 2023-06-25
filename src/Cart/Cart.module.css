@@ -2,20 +2,18 @@
     height : 100vh;
     top:0vh;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.897);
 }
 
-.modal {
-    top: 10em;
+
+.modale {
     position: absolute;
-    height: fit-content;
-    width: 60%;
+    top: 0%;
     z-index: 3;
-    margin-left: 20%;
-    background-color:white;
-    border-radius: 1em;
+    margin-left: 25%;
+    width: 50%;
 }
 
 
@@ -53,8 +51,8 @@
 
 .summary {
     border-top: 0.5px solid blue;
-    padding-inline: 10rem;
     align-items: center;
+    padding-inline: 3%;
     display: flex;
     justify-content: space-between;
 }
@@ -88,4 +86,17 @@
   margin-left: 2rem;
   background-color: rgb(54, 165, 240);
   color: black;
+}
+
+@media (max-width: 800px) {
+    .modale {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 500px) {
+    .modale {
+        margin-left: 0%;
+        width: max-content;
+    }
 }

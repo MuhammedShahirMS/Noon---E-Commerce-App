@@ -14,42 +14,42 @@ const Categories = () => {
 
     return (
         <>
-        <h2 className='text-start text-secondary'>Select Products here</h2>
-        < Row xs={12} className={classes.categories}>
-        <Col>
+        <h2 className='text-start text-secondary'>Categories</h2>
+        < Row className={classes.categories}>
+        <Col xs={3} md={1}>
         <Image catg={'gaming'} src='/images/gaming.png' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'laptops'} src='/images/laptop.png' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'deals'} src='/images/deals.png' onClick={categoryHandler} />
         </Col>
         <Col>
         <Image catg={'clearance'} src='/images/clearance.png' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'giftcards'} src='/images/giftcard.avif' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'mobiles'} src='/images/mobiles.png' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'laptops'} src='/images/laptop accessories.avif' onClick={categoryHandler} />
         </Col>
         <Col>
         <Image catg={'beauty'} src='/images/beauty.avif' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'mens'} src='/images/mens.avif' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'womens'} src='/images/womens.avif' onClick={categoryHandler} />
         </Col>
         <Col>
         <Image catg={'kitchen'} src='/images/kitchen.avif' onClick={categoryHandler} />
         </Col>
-        <Col>
+        <Col xs={3} md={1}>
         <Image catg={'babies'} src='/images/baby.avif' onClick={categoryHandler} />
         </Col>
         </Row>

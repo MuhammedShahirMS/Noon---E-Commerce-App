@@ -17,8 +17,9 @@ const Home = () => {
             </Col>
             </Row>
             <Categories/>
-            <Row xs={3} md={6}>
-                {products.map(item => <Col key={item.id}><Item {...item}/></Col>)}
+            <h2 className='text-start text-secondary mt-4'>All Products</h2>
+            <Row xs={2} md={6}>
+                {products.map(item => <Col className={classes.card} key={item.id}><Item {...item}/></Col>)}
             </Row>
             
         </Container>

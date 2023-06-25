@@ -10,13 +10,15 @@ const CategoryItems = () => {
     const location = useLocation();
 
     const category = location?.state.catg;
+
+    
     const isEmpty = category === '';
     const categoryProducts = products.filter(item => item.category === category);
 
 
     return(
         <Container fluid>
-            {category && <Row xs={3} md={6}>
+            {category && <Row xs={2} md={6}>
             {categoryProducts.map(item => <Col key={item.id}><Item {...item}/></Col>)}
             {isEmpty && <h1>No Products found</h1>}
             </Row>}

@@ -21,9 +21,9 @@ const CartLink = () => {
 
 
     return(
-        <NavLink className='d-flex me-5' onClick={toggleCartHandler}>
+        <NavLink className='d-flex ' onClick={toggleCartHandler}>
         <p>Cart</p>
-        <img src = {cartImg} style={{height:25, width:25}} alt= "myCart"/>
+        <img src = {cartImg} style={{height:25, width:25, justifySelf:'center'}} alt= "myCart"/>
         <div>{totalNoOfItems || 0 }</div>
         </NavLink>
     )

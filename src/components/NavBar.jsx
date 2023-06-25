@@ -1,29 +1,52 @@
+import { useState, useRef } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
 import Nav from 'react-bootstrap/Nav';
-import { NavLink } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import { useSelector } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 import styles from './NavBar.module.css';
 import CartLink from '../Cart/CartLink';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 
 const NavBar = () => {
 
+const [show, setShow] = useState(false);
+const searchText = useRef();
+
+const searchHandler = (e) => {
+  e.preventDefault();
+  alert(`You just searched ${searchText.current.value}`);
+}
+
+const showDropdown = (e)=>{
+setShow(!show);
+}
+const hideDropdown = e => {
+setShow(false);
+}
+
 const isLoggedIn =  useSelector(state => state.user.isAuthenticated);
+const navigate = useNavigate(); 
+
+const categoryHandler = (e) => {
+    navigate('/Category', {state: { catg : e.target.getAttribute('catg')}} )
+}
   
 const auth = isLoggedIn? 'Sign out': 'Login';
 
-  return(
-
-<>
+  return( <>
+  
     <Navbar className={styles.navBar1}>
         <Container fluid>
-          <Navbar.Brand href="/Home">
-          <img
+          <Row className={styles.row}>
+            <Col>
+            <Navbar.Brand onClick={() => {navigate('/Home')}}>
+            <img
               alt="logo"
               src="/images/noonLogo.PNG"
               width="100"
@@ -31,86 +54,59 @@ const auth = isLoggedIn? 'Sign out': 'Login';
               className="d-inline-block align-top"
             />{' '}
           </Navbar.Brand>
-          <Form className="d-flex">
+          </Col>
+          <Col xs={12} md={{span:6, offset:2}} >
+           <Form onSubmit={searchHandler}>
             <Form.Control
               type="search"
               placeholder="Search"
+              width='10000'
               className="me-2"
               aria-label="Search"
+              ref={searchText}
             />
-          </Form>
-          <div className={styles.rightNavs}>
-          <Nav.Link href="/Auth" className='me-5'>{auth}</Nav.Link>
-          <CartLink/>
-          </div>
+          </Form> 
+          </Col>
+          <Col  xs={12} md={1}>
+          <Nav.Link className='text-end' onClick={() => {navigate('/auth')}}>{auth}</Nav.Link>
+          </Col>
+          <Col  xs={12} md={1}>
+          <CartLink />
+          </Col>
+          </Row>
         </Container>
       </Navbar>
 
-      <Navbar className={styles.navBar2}>
-        <Container fluid>
-          <Nav className="me-auto">
-
-          <NavDropdown className='mx-4' title="ALL CATEGORIES" id="basic-nav-dropdown">
-              <NavDropdown.Item className='text-primary' href="#action/3.1">Mens</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Womens
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Laptops</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                About us
-              </NavDropdown.Item>
-              </NavDropdown>
-
-
-            <Nav.Link href="#features">ELECTRONICS</Nav.Link>
-            <Nav.Link href="#men">MEN</Nav.Link>
-            <Nav.Link href="#women">WOMEN</Nav.Link>
-            <Nav.Link href="#home">HOME</Nav.Link>
-            <Nav.Link href="#beauty">BEAUTY & FRAGRANCE</Nav.Link>
-            <Nav.Link href="#babies">BABY & TOYS</Nav.Link>
-            <Nav.Link href="#sports">SPORTS</Nav.Link>
-            <Nav.Link href="#sellers">BEST SELLERS</Nav.Link>
+      <Navbar className={styles.navBar2} collapseOnSelect expand="lg" bg="white" variant="light">
+      <Container fluid>
+      
+      <NavDropdown className='ms-5' title="TRENDS" id="collasible-nav-dropdown" 
+        show={show}
+        onMouseEnter={showDropdown} 
+        onMouseLeave={hideDropdown}
+        >
+        <NavDropdown.Item catg = 'mens' onClick={categoryHandler}>MEN</NavDropdown.Item>
+        <NavDropdown.Item catg="womens" onClick={categoryHandler}>WOMEN</NavDropdown.Item>
+        <NavDropdown.Item catg="babies" onClick={categoryHandler}>BABIES</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item onClick={() => {navigate('/Home')}}>About us</NavDropdown.Item>
+        </NavDropdown>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-5">
+            <Nav.Link catg="laptops" onClick={categoryHandler}>ELECTRONICS</Nav.Link>
+            <Nav.Link catg="mens" onClick={categoryHandler}>MEN</Nav.Link>
+            <Nav.Link catg="womens" onClick={categoryHandler}>WOMEN</Nav.Link>
+            <Nav.Link catg="home" onClick={categoryHandler}>HOME</Nav.Link>
+            <Nav.Link catg="beauty" onClick={categoryHandler}>BEAUTY & FRAGRANCE</Nav.Link>
+            <Nav.Link catg="babies" onClick={categoryHandler}>BABY & TOYS</Nav.Link>
+            <Nav.Link catg="sports" onClick={categoryHandler}>SPORTS</Nav.Link>
+            <Nav.Link catg="sell" onClick={categoryHandler}>SELL ON NOON</Nav.Link>
           </Nav>
-
-        </Container>
-      </Navbar>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
       </>
-
-   /*  <header>
-        <div className={styles.logo}>
-            <img src={Logo} style={{height:75, width:75}} alt= "mySVG"/>
-        </div>
-        <nav className={styles.nav}>
-        <ul>
-            <li>
-             <NavLink to = '/Home'>Home</NavLink>
-            </li>
-            <li>
-            <NavLink className={(navData) => navData.isActive ? styles.active: ''} to = '/Men'>Men</NavLink>
-            </li>
-            <li>
-            <NavLink className={(navData) => navData.isActive ? styles.active: ''} to = '/Women'>Women</NavLink>
-            </li>
-            {isLoggedIn && <li>
-            <NavLink className={(navData) => navData.isActive ? styles.active: ''} to = '/MyOrders'>My Orders</NavLink>
-            </li>}
-            <li>
-            <NavLink className={navData => navData.isActive ? styles.active: ''} to = '/About'>About</NavLink>
-            </li>
-            <CartButton className = {styles.cartBtn}/>
-            <li>
-            <div className={styles.profile}>
-            <NavLink to = '/Auth'>
-            <img className={styles.profileIcon} src={login}  alt= "login"/>
-            </NavLink>
-            {isLoggedIn ? <p>Logged In</p>: <p>Logged out</p>}
-            </div>
-            </li>
-            </ul>
-            </nav>
-        
-        </header> */ 
     )
 
 }

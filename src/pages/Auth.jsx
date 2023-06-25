@@ -9,6 +9,7 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 import classes from './Auth.module.css';
 import UserForm from "../components/UserForm";
 import LoadingSpinner from "../components/LoadingSpinner";
+import Button from "react-bootstrap/Button";
 
 
 export const Auth = () => {
@@ -143,8 +144,8 @@ export const Auth = () => {
     else {
             content = <>
             <p>{`signed in as ${emailIdForUse} `}</p>
-            <button onClick={signOutHandler} className={classes.signoutBtn}>Sign out</button>
-            <button onClick={viewOrdersHandler}>My Orders</button>
+            <Button onClick={signOutHandler} variant='warning' className="mx-2 my-2">Sign out</Button>
+            <Button onClick={closeHandler} variant='secondary' className="mx-2 my-2">Close</Button>
             </>
         }
         const modalClassName = isLoggedIn ? classes.signoutModal : classes.modal;

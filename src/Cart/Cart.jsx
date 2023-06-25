@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 import classes from './Cart.module.css';
 import CartItem from './CartItem';
 import { cartActions } from '../Redux/cart-slice';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const Cart = () => {
 
-console.log('Playing in cart')
+
 const cart          = useSelector(state => state.mxCart.cart);
 const isDisplayed   = useSelector(state => state.mxCart.isCartVisible);
 const totalPrice    = useSelector(state => state.mxCart.totalPrice);
@@ -52,13 +54,21 @@ const BackDrop = () => {
         <div onClick={closeHandler} className={classes.backdrop}/>
     )}
 
-const Modal = () => {
-
+const ModalCart = () => {
 
     return (
-        <div className= {classes.modal}>
-            <h1> Cart </h1>
-            <ul>
+        <div className={classes.modale}>
+        <div
+        className="modal show centered"
+        style={{ display: 'block', position: 'initial' }}
+    >
+        <Modal.Dialog>
+        <Modal.Header closeButton onClick={closeHandler}>
+        <Modal.Title>Cart</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+        <ul>
                 {cart.map(item => <li key={item.id}> <CartItem {...item} 
                 add    = {addItemHandler}
                 reduce = {reduceItemHandler}
@@ -66,23 +76,30 @@ const Modal = () => {
             </ul>
             
             {emptyCart && <div className={classes.empty}>No items in the Cart..Please add Items</div>}
-            {!emptyCart && <div className= {classes.summary}>
-            <h3> Cart Total </h3> =
+            
+        
+        </Modal.Body>
+        {!emptyCart && <div className= {classes.summary}>
+            <p>Total Amount - </p>
             <p className={classes.total}> {modifiedTotal} </p>
             </div>}
-            <div className = {classes.cartActions}>
-            <button className={classes.close} onClick={closeHandler}>Close</button>
-            { !emptyCart && <button className={classes.order} onClick={orderHandler}>Order</button>}
-            </div>
-        </div>
+        <Modal.Footer>
+          <Button variant="secondary" className={classes.close} onClick={closeHandler}>Close</Button>
+          { !emptyCart && <Button variant="primary" onClick={orderHandler}>Order</Button>}
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
+    </div>
+        
     )
 }
 
  if(isDisplayed)
     return(
         <>
+        {ReactDOM.createPortal(<ModalCart/>, document.getElementById('root-overlay'))}
         {ReactDOM.createPortal(<BackDrop/>, document.getElementById('root-backdrop'))}
-        {ReactDOM.createPortal(<Modal/>, document.getElementById('root-overlay'))}
+        
         </>
 
     )

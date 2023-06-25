@@ -46,6 +46,7 @@ function App() {
     <Route path='/Product/:productId' element = {<Product/>} />
     <Route path='/Auth' element={<Auth/>}/>
     <Route path = '/Category' element={<CategoryItems/>}/>
+    <Route path = '/Category/:catg' element={<CategoryItems/>}/>
     </Routes>
     <Cart/>
     </>
